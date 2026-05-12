@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Uninstalls all staging releases.
+set -euo pipefail
+
+NS="${K8_STAGING_NAMESPACE:-staging}"
+
+echo "Uninstalling staging releases from ${NS}..."
+
+for release in $(helm list -n "$NS" -q 2>/dev/null); do
+  echo "  Uninstalling $release..."
+  helm uninstall "$release" -n "$NS" --wait
+done
+
+echo "Done."

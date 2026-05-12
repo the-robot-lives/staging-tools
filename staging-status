@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# Shows staging pod status, KEDA ScaledObject state, and resource usage.
+set -euo pipefail
+
+NS="${K8_STAGING_NAMESPACE:-staging}"
+
+echo ""
+echo "=== Helm Releases ==="
+helm list -n "$NS" 2>/dev/null || echo "  (no releases)"
+
+echo ""
+echo "=== Pods ==="
+kubectl get pods -n "$NS" -o wide 2>/dev/null || echo "  (no pods)"
+
+echo ""
+echo "=== ScaledObjects ==="
+kubectl get scaledobject -n "$NS" 2>/dev/null || echo "  (no ScaledObjects — KEDA may not be installed)"
+
+echo ""
+echo "=== Resource Usage ==="
+kubectl top pods -n "$NS" 2>/dev/null || echo "  (metrics unavailable)"
+
+echo ""

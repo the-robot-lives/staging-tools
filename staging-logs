@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+# Tails logs for a staging service. Usage: staging-logs [frontend|backend]
+set -euo pipefail
+
+NS="${K8_STAGING_NAMESPACE:-staging}"
+APP_PREFIX="${K8_APP_PREFIX:-app}"
+SERVICE="${1:-frontend}"
+
+case "$SERVICE" in
+  frontend) LABEL="app.kubernetes.io/name=${APP_PREFIX}-frontend" ;;
+  backend)  LABEL="app.kubernetes.io/name=${APP_PREFIX}-backend" ;;
+  *)        LABEL="app.kubernetes.io/name=${APP_PREFIX}-$SERVICE" ;;
+esac
+
+PODS=$(kubectl get pods -n "$NS" -l "$LABEL" --no-headers 2>/dev/null | wc -l | tr -d ' ')
+
+if [[ "$PODS" == "0" ]]; then
+  echo "No pods running for $SERVICE in $NS."
+  echo "KEDA may have scaled to zero. Run: staging-status"
+  echo "To wake up staging, curl your staging URL."
+  exit 0
+fi
+
+kubectl logs -n "$NS" -l "$LABEL" --follow --all-containers "$@"
