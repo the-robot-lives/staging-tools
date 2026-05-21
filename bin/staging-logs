@@ -1,10 +1,53 @@
 #!/usr/bin/env bash
-# Tails logs for a staging service. Usage: staging-logs [frontend|backend]
+# =============================================================================
+# staging-logs — Tails logs for a staging service.
+#
+# Usage:
+#   staging-logs [frontend|backend|<service>] [--config <path>]
+# =============================================================================
 set -euo pipefail
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+K8_LIB_DIR="${K8_LIB_DIR:-$(cd "$SCRIPT_DIR/../../k8-lib" 2>/dev/null && pwd || echo "${HOME}/.local/share/k8-lib")}"
+INFRA_ROOT="${INFRA_ROOT:-$(pwd)}"
+
+# Pre-parse --config (must resolve before k8-lib sourcing)
+for _k8_arg in "$@"; do
+  case "$_k8_arg" in
+    --config=*) export K8_CONFIG="${_k8_arg#--config=}" ;;
+  esac
+done
+_k8_prev=""
+for _k8_arg in "$@"; do
+  [[ "$_k8_prev" == "--config" ]] && export K8_CONFIG="$_k8_arg"
+  _k8_prev="$_k8_arg"
+done
+unset _k8_arg _k8_prev
+
+source "$K8_LIB_DIR/bin/config.sh"
+source "$K8_LIB_DIR/bin/common.sh"
 
 NS="${K8_STAGING_NAMESPACE:-staging}"
 APP_PREFIX="${K8_APP_PREFIX:-app}"
-SERVICE="${1:-frontend}"
+
+# Extract service name (first non-flag argument)
+SERVICE="frontend"
+EXTRA_ARGS=()
+_skip_next=false
+for arg in "$@"; do
+  if $_skip_next; then _skip_next=false; continue; fi
+  case "$arg" in
+    --config) _skip_next=true ;;
+    --config=*) ;;
+    *)
+      if [[ "$SERVICE" == "frontend" && ! "$arg" == --* ]]; then
+        SERVICE="$arg"
+      else
+        EXTRA_ARGS+=("$arg")
+      fi
+      ;;
+  esac
+done
+unset _skip_next
 
 case "$SERVICE" in
   frontend) LABEL="app.kubernetes.io/name=${APP_PREFIX}-frontend" ;;
@@ -21,4 +64,4 @@ if [[ "$PODS" == "0" ]]; then
   exit 0
 fi
 
-kubectl logs -n "$NS" -l "$LABEL" --follow --all-containers "$@"
+kubectl logs -n "$NS" -l "$LABEL" --follow --all-containers "${EXTRA_ARGS[@]}"
