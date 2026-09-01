@@ -13,10 +13,16 @@ staging-utils/
 │   ├── PROJ-ARCH.md            #   Architecture: config chain, tool internals, KEDA notes
 │   ├── PROJ-ARCH.summary.md    #   Condensed architecture reference
 │   ├── PROJ-LAYOUT.md          #   This file
-│   └── PROJ-LAYOUT.summary.md  #   Condensed tree for tools/agents
+│   ├── PROJ-LAYOUT.summary.md  #   Condensed tree for tools/agents
+│   ├── PROJ-HOWTO.md           #   Task-oriented how-to guide
+│   ├── PROJ-HOWTO.summary.md   #   Condensed how-to for tools/agents
+│   ├── PROJ-FAQ.md             #   Troubleshooting / FAQ
+│   └── PROJ-FAQ.summary.md     #   Condensed FAQ for tools/agents
 ├── .gitignore                  # Ignores editor swap files, .env, .envrc.local
+├── CHANGELOG.md                # Release notes / change history
 ├── Makefile                    # `make install` → installs bin/staging-* to ~/.local/bin (compile/test are no-ops)
-└── README.md                   # Start here — install, prerequisites, config table, usage
+├── README.md                   # Start here — install, prerequisites, config table, usage
+└── merge-notes.md              # Branch-sweep / merge provenance notes (sep-1 sweep)
 ```
 
 ## Notes
