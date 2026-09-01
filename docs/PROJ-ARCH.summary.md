@@ -11,7 +11,7 @@ Terminal utility package: four bash scripts managing the Noizu k8s staging lifec
 
 ## Design
 
-Thin convention wrappers over Helm/kubectl. No local `lib/` — shared logic (config chain, `--assist` AI help) sourced at runtime from k8-lib (`~/.local/share/k8-lib`, override `K8_LIB_DIR`). Config from `infra-config.yaml`: `.kubernetes.staging_namespace` (`K8_STAGING_NAMESPACE`, default `staging`) and `.kubernetes.app_prefix` (`K8_APP_PREFIX`, default `app`); `--config <path>` pre-parsed into `K8_CONFIG` before sourcing. No secret handling (Infisical owns that).
+Thin convention wrappers over Helm/kubectl. No local `lib/` — shared logic (config chain, `--assist` AI help) sourced at runtime from k8-lib (`~/.local/share/k8-lib`, override `K8_LIB_DIR`). Config from `infra-config.yaml`: `.kubernetes.staging_namespace` (`K8_STAGING_NAMESPACE`, default `staging`) and `.kubernetes.app_prefix` (`K8_APP_PREFIX`, default `app`); `--config <path>` pre-parsed into `K8_CONFIG` before sourcing. No secret handling (Infisical owns that). Full config-artifact reference: `docs/PROJ-SCHEMA.md` (no persistence layer).
 
 ## Dependencies
 

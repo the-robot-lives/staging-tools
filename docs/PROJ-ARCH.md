@@ -53,6 +53,8 @@ Scripts source `config.sh`, `common.sh`, and `assist.sh` from k8-lib (`K8_LIB_DI
 | Staging namespace | `.kubernetes.staging_namespace` | `K8_STAGING_NAMESPACE` | `staging` |
 | App label prefix | `.kubernetes.app_prefix` | `K8_APP_PREFIX` | `app` |
 
+→ *Full config/env/CLI artifact reference (including the no-persistence note): [PROJ-SCHEMA.md](PROJ-SCHEMA.md)*
+
 ## External Dependencies
 
 - **k8-lib** — shared shell library (config chain, `--assist` AI help); installed by repo-root `make install-utilities`
