@@ -44,6 +44,8 @@ graph LR
 | `bin/staging-status` | Dashboard: Helm releases, pods (`-o wide`), KEDA ScaledObjects, `kubectl top` resource usage |
 | `Makefile` | `make install` → installs the four scripts to `$INSTALL_DIR` (default `~/.local/bin`); `compile`/`test` are no-ops |
 
+→ *Components ↔ directories: see [PROJ-LAYOUT.md](PROJ-LAYOUT.md)*
+
 ## Configuration Chain
 
 Scripts source `config.sh`, `common.sh`, and `assist.sh` from k8-lib (`K8_LIB_DIR`, default `~/.local/share/k8-lib`). Each script pre-parses `--config <path>` into `K8_CONFIG` *before* sourcing, so an alternate `infra-config.yaml` takes effect during config resolution. `staging-up` skips the config chain entirely (helm-upgrade does its own) and only wires in `assist.sh` when present.
