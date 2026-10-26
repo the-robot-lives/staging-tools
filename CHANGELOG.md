@@ -1,5 +1,9 @@
 # Changelog — utilities/k8/staging-utils
 
+## 2026-10-26
+
+- docs: correct stale "main is CI/CD-only" deploy note — merging into main triggers CI/CD (user-verified 2026-10-26)
+
 ## [Unreleased]
 - Regenerated `docs/PROJ-ARCH.md`/`PROJ-ARCH.summary.md` and added `docs/PROJ-LAYOUT.md`/`PROJ-LAYOUT.summary.md` per the NPL arch/layout doc convention
 
