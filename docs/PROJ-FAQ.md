@@ -1,5 +1,7 @@
 # PROJ-FAQ — staging-utils
 
+<!-- 〚📁:7c4dafb3-284f-5c79-9a33-e41226833d22〛 staging-tools FAQ doc :: Troubleshooting — why-would-I, when-shouldn't-I, what's-the-catch -->
+
 Why-would-I, when-shouldn't-I, and what's-the-catch questions for the `staging-*` tools. For procedures, see [PROJ-HOWTO.md](PROJ-HOWTO.md); for design rationale, see [PROJ-ARCH.md](PROJ-ARCH.md).
 
 ## Motivation

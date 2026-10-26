@@ -1,5 +1,7 @@
 # CLAUDE.md — staging-utils
 
+<!-- 〚📁:0590ade7-09bf-5f6c-861d-6f8281741d6f〛 staging-tools CLAUDE guidance :: Agent guidance — monorepo rules, worktree convention, branch/PR policy -->
+
 Staging-environment ops helper; see bin/ and README.md. Coupled to trl-infra .infra-config.yaml + terraform/; shares k8-lib. (Note: staging/ in trl-infra is local-only, gitignored — never registered/pushed.)
 
 

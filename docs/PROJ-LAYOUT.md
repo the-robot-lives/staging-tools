@@ -1,5 +1,7 @@
 # Project Layout
 
+<!-- 〚📁:57ee1c2e-a5c6-5b73-bb9f-097367c0b473〛 staging-tools layout doc :: Navigable map of the project tree and setup-required files -->
+
 `staging-utils` is a terminal utility package for staging environment lifecycle management (deploy, teardown, logs, status) on the Noizu k8s cluster. Tools install to `~/.local/bin` via `make install` and load configuration from `infra-config.yaml` through the shared k8-lib config chain (`~/.local/share/k8-lib`).
 
 ```

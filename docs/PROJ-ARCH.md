@@ -1,5 +1,7 @@
 # Project Architecture — staging-utils
 
+<!-- 〚📁:d8f702ce-e684-5132-806e-49a628fdf2b5〛 staging-tools architecture doc :: System overview, components, configuration chain, and key decisions -->
+
 ## Overview
 
 `staging-utils` is a terminal utility package: four small bash scripts (`bin/staging-up`, `staging-down`, `staging-logs`, `staging-status`) that manage the staging environment lifecycle on the Noizu k8s cluster — deploy, teardown, log tailing, and status inspection. The scripts are thin, convention-driven wrappers over `helm` and `kubectl`; all shared logic (config resolution, common helpers, AI `--assist` help) lives in the external `k8-lib` shell library.
