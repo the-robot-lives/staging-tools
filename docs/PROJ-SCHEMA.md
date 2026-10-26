@@ -1,5 +1,7 @@
 # Project Schema — Data & Config Artifacts
 
+<!-- 〚📁:9442acc6-15a1-5d22-b9d1-76192210ac65〛 staging-tools schema doc :: Config/env surface, runtime file locations, and external cluster state (no persistence layer) -->
+
 > **No persistence layer.** `staging-utils` is a bash CLI utility package. It defines
 > **no database, no SQL schema, no local state files, and no file formats of its own.**
 > All state lives in the Kubernetes cluster (Helm releases, pods, KEDA ScaledObjects)

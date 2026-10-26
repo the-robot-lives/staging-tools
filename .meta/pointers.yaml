@@ -1,0 +1,98 @@
+---
+pointers:
+  0590ade7-09bf-5f6c-861d-6f8281741d6f:
+    created_at: 2026-10-26T22:25:54.592692Z
+    description: Agent guidance — monorepo rules, worktree convention, branch/PR policy
+    file_path: CLAUDE.md
+    function: staging-tools CLAUDE guidance
+    kind: file
+    line: 3
+    locations:
+      - file_path: CLAUDE.md
+        line: 3
+    token: 𓯱𓊢𓥊𓘟
+    updated_at: 2026-10-26T22:25:54.592692Z
+  1342a706-e45a-595c-8c9b-0b6f4fd5459d:
+    created_at: 2026-10-26T22:25:54.592663Z
+    description: Repo entry point — what staging-utils is, install, usage, and the KEDA scale-to-zero note
+    file_path: README.md
+    function: staging-tools README
+    kind: file
+    line: 3
+    locations:
+      - file_path: README.md
+        line: 3
+    token: 𓔎𓛉𓬌𓙭
+    updated_at: 2026-10-26T22:25:54.592663Z
+  282d1444-9576-55e5-93f2-21a455e34ef1:
+    created_at: 2026-10-26T22:25:54.592685Z
+    description: Trust boundaries, vulnerability register T-001..T-006, and residual risk
+    file_path: docs/THREAT-MODEL.md
+    function: staging-tools threat model
+    kind: file
+    line: 3
+    locations:
+      - file_path: docs/THREAT-MODEL.md
+        line: 3
+    token: 𓢀𓁓𓥄𓵁
+    updated_at: 2026-10-26T22:25:54.592685Z
+  57ee1c2e-a5c6-5b73-bb9f-097367c0b473:
+    created_at: 2026-10-26T22:25:54.592701Z
+    description: Navigable map of the project tree and setup-required files
+    file_path: docs/PROJ-LAYOUT.md
+    function: staging-tools layout doc
+    kind: file
+    line: 3
+    locations:
+      - file_path: docs/PROJ-LAYOUT.md
+        line: 3
+    token: 𔔸𔃐𓠄𓆓
+    updated_at: 2026-10-26T22:25:54.592701Z
+  67a50643-3236-5ff0-97ed-9ac871bc1955:
+    created_at: 2026-10-26T22:25:54.592705Z
+    description: Task-oriented guides for deploying, debugging, and tearing down staging
+    file_path: docs/PROJ-HOWTO.md
+    function: staging-tools how-to doc
+    kind: file
+    line: 3
+    locations:
+      - file_path: docs/PROJ-HOWTO.md
+        line: 3
+    token: 𔗘𓾰𓐄𔆥
+    updated_at: 2026-10-26T22:25:54.592705Z
+  7c4dafb3-284f-5c79-9a33-e41226833d22:
+    created_at: 2026-10-26T22:25:54.592648Z
+    description: "Troubleshooting — why-would-I, when-shouldn't-I, what's-the-catch"
+    file_path: docs/PROJ-FAQ.md
+    function: staging-tools FAQ doc
+    kind: file
+    line: 3
+    locations:
+      - file_path: docs/PROJ-FAQ.md
+        line: 3
+    token: 𓃁𓫆𓼎𔐒
+    updated_at: 2026-10-26T22:25:54.592648Z
+  9442acc6-15a1-5d22-b9d1-76192210ac65:
+    created_at: 2026-10-26T22:25:54.592696Z
+    description: Config/env surface, runtime file locations, and external cluster state (no persistence layer)
+    file_path: docs/PROJ-SCHEMA.md
+    function: staging-tools schema doc
+    kind: file
+    line: 3
+    locations:
+      - file_path: docs/PROJ-SCHEMA.md
+        line: 3
+    token: 𔃸𓷙𓒷𔁥
+    updated_at: 2026-10-26T22:25:54.592696Z
+  d8f702ce-e684-5132-806e-49a628fdf2b5:
+    created_at: 2026-10-26T22:25:54.592689Z
+    description: System overview, components, configuration chain, and key decisions
+    file_path: docs/PROJ-ARCH.md
+    function: staging-tools architecture doc
+    kind: file
+    line: 3
+    locations:
+      - file_path: docs/PROJ-ARCH.md
+        line: 3
+    token: 𓩘𓍺𓭛𔗵
+    updated_at: 2026-10-26T22:25:54.592689Z

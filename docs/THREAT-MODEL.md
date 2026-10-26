@@ -1,5 +1,7 @@
 # Threat Model — staging-utils
 
+<!-- 〚📁:282d1444-9576-55e5-93f2-21a455e34ef1〛 staging-tools threat model :: Trust boundaries, vulnerability register T-001..T-006, and residual risk -->
+
 ## Overview
 
 `staging-utils` is four developer-workstation bash wrappers over `kubectl`/`helm`

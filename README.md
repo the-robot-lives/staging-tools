@@ -1,5 +1,7 @@
 # staging-utils
 
+<!-- 〚📁:1342a706-e45a-595c-8c9b-0b6f4fd5459d〛 staging-tools README :: Repo entry point — what staging-utils is, install, usage, and the KEDA scale-to-zero note -->
+
 **Repo:** https://github.com/the-robot-lives/staging-tools
 
 Staging environment lifecycle tools — deploy, tear down, tail logs, and inspect status for the local staging namespace.

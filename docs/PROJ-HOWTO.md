@@ -1,5 +1,7 @@
 # PROJ-HOWTO — staging-utils
 
+<!-- 〚📁:67a50643-3236-5ff0-97ed-9ac871bc1955〛 staging-tools how-to doc :: Task-oriented guides for deploying, debugging, and tearing down staging -->
+
 Task-oriented guides for the `staging-*` tools. For what these tools are, see [PROJ-ARCH.md](PROJ-ARCH.md); for where files live, see [PROJ-LAYOUT.md](PROJ-LAYOUT.md).
 
 ## Index
