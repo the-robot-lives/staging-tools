@@ -14,10 +14,14 @@ staging-utils/
 │   ├── PROJ-ARCH.summary.md    #   Condensed architecture reference
 │   ├── PROJ-LAYOUT.md          #   This file
 │   ├── PROJ-LAYOUT.summary.md  #   Condensed tree for tools/agents
+│   ├── PROJ-SCHEMA.md          #   Config/env surface + external state (no persistence layer)
+│   ├── PROJ-SCHEMA.summary.md  #   Condensed schema reference
 │   ├── PROJ-HOWTO.md           #   Task-oriented how-to guide
 │   ├── PROJ-HOWTO.summary.md   #   Condensed how-to for tools/agents
 │   ├── PROJ-FAQ.md             #   Troubleshooting / FAQ
-│   └── PROJ-FAQ.summary.md     #   Condensed FAQ for tools/agents
+│   ├── PROJ-FAQ.summary.md     #   Condensed FAQ for tools/agents
+│   ├── THREAT-MODEL.md         #   Trust boundaries, vulnerability register (T-001..), accepted risk
+│   └── THREAT-MODEL.summary.md #   Condensed threat model
 ├── .gitignore                  # Ignores editor swap files, .env, .envrc.local
 ├── CHANGELOG.md                # Release notes / change history
 ├── Makefile                    # `make install` → installs bin/staging-* to ~/.local/bin (compile/test are no-ops)

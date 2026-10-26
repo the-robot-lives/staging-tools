@@ -2,6 +2,7 @@
 
 ## 2026-10-26
 
+- docs: doc-sweep — added THREAT-MODEL.md(+summary) with trust-boundary register (T-001..T-006); layout tree gained missing PROJ-SCHEMA/THREAT-MODEL entries; arch/schema verified current against source (pointer seed PR: pending)
 - docs: correct stale "main is CI/CD-only" deploy note — merging into main triggers CI/CD (user-verified 2026-10-26)
 
 ## [Unreleased]

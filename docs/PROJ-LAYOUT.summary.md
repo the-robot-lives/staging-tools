@@ -9,7 +9,7 @@ staging-utils/
 │   ├── staging-down            #   uninstall staging Helm releases
 │   ├── staging-logs            #   tail service logs
 │   └── staging-status          #   pods/releases/KEDA/usage dashboard
-├── docs/                       # PROJ-ARCH, PROJ-LAYOUT, PROJ-HOWTO, PROJ-FAQ (.md + .summary.md)
+├── docs/                       # PROJ-ARCH, PROJ-LAYOUT, PROJ-SCHEMA, PROJ-HOWTO, PROJ-FAQ, THREAT-MODEL (.md + .summary.md)
 ├── .gitignore                  # swap files, .env, .envrc.local
 ├── CHANGELOG.md                # release notes
 ├── Makefile                    # make install
