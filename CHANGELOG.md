@@ -1,5 +1,9 @@
 # Changelog — utilities/k8/staging-utils
 
+## 2026-10-28
+
+- docs: add AGENT-README.md (agent orientation)
+
 ## 2026-10-26
 
 - docs: doc-sweep — added THREAT-MODEL.md(+summary) with trust-boundary register (T-001..T-006); layout tree gained missing PROJ-SCHEMA/THREAT-MODEL entries; arch/schema verified current against source (pointer seed PR: #4)
